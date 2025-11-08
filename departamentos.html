@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Departamentos - SEEMP</title>
+<style>
+:root{--azul:#0b5cff;--verde:#2ca58d;--vermelho:#d32f2f;--texto:#223046;--bg:#ffffff;}
+*{box-sizing:border-box;margin:0;padding:0;font-family:Segoe UI,Roboto,Arial,sans-serif}
+body{background:var(--bg);color:var(--texto);-webkit-font-smoothing:antialiased}
+header{position:fixed;top:0;left:0;right:0;z-index:1000;background:#fff;border-bottom:5px solid var(--vermelho);box-shadow:0 2px 6px rgba(0,0,0,0.06)}
+.container{max-width:1100px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:12px}
+.brand img{height:56px;display:block}
+.menu-wrap{overflow:hidden;flex:1}
+.menu-scroll{display:flex;gap:12px;overflow-x:auto;white-space:nowrap;padding:8px 6px;scroll-behavior:smooth}
+.menu-scroll::-webkit-scrollbar{display:none}
+.menu-scroll a{display:inline-block;padding:8px 12px;border-radius:8px;text-decoration:none;color:var(--texto);font-weight:700}
+.menu-scroll a:hover{background:var(--azul);color:#fff}
+
+main{max-width:1100px;margin:120px auto 80px auto;padding:20px}
+.page-header{display:flex;flex-direction:column;gap:8px}
+.section-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:20px}
+.dept{background:#fff;border-radius:10px;padding:18px;box-shadow:0 6px 18px rgba(34,48,70,0.06);display:flex;flex-direction:column;gap:10px}
+.icon{width:64px;height:64px;border-radius:10px;background:linear-gradient(135deg,var(--azul),var(--green));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800}
+.dept h3{margin:0;font-size:18px}
+.dept p{margin:0;color:#475569;line-height:1.5}
+.ouvidoria-cta{display:flex;gap:8px;align-items:center;margin-top:8px}
+.btn{background:var(--azul);color:#fff;padding:10px 14px;border-radius:8px;border:none;cursor:pointer;font-weight:700;text-decoration:none}
+.btn.secondary{background:#fff;color:var(--azul);border:2px solid rgba(11,92,255,0.08)}
+@media(max-width:1000px){.section-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.section-grid{grid-template-columns:1fr}.brand img{height:48px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="container" role="navigation" aria-label="Principal">
+    <div class="brand"><a href="index.html"><img src="https://files.catbox.moe/nut036.jpeg" alt="Logo SEEMP"></a></div>
+    <div class="menu-wrap" style="min-width:0">
+      <nav class="menu-scroll" id="menuScroll" aria-label="Menu principal">
+        <a href="index.html">Início</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="programas.html">Programas</a>
+        <a href="empreendedor.html">Empreendedor</a>
+        <a href="noticias.html">Notícias</a>
+        <a href="transparencia.html">Transparência</a>
+        <a href="contato.html">Contato</a>
+        <a href="gabinete.html">Gabinete</a>
+        <a href="departamentos.html">Departamentos</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="page-header">
+    <h1>Departamentos — SEEMP</h1>
+    <p style="color:#6b7280">Conheça as áreas responsáveis por apoiar, capacitar e incentivar micro e pequenas empresas.</p>
+  </div>
+
+  <section class="section-grid" aria-label="Lista de departamentos">
+    <article class="dept" id="gabinete">
+      <div style="display:flex;gap:12px;align-items:center">
+        <div class="icon" style="background:linear-gradient(135deg,var(--azul),var(--verde))">G</div>
+        <div>
+          <h3>Gabinete do Secretário</h3>
+          <p>Coordena a política estratégica da SEEMP, articula parcerias, define prioridades e representa a secretaria em reuniões institucionais e fóruns de desenvolvimento econômico.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="dept" id="microempresas">
+      <div style="display:flex;gap:12px;align-items:center">
+        <div class="icon" style="background:linear-gradient(135deg,var(--verde),#0fb08a)">M</div>
+        <div>
+          <h3>Departamento de Microempresas e MEIs</h3>
+          <p>Atua na formalização, atendimento e acompanhamento de microempreendedores individuais (MEIs) e microempresas, oferecendo suporte para registro, regularização e início das atividades.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="dept" id="apoio">
+      <div style="display:flex;gap:12px;align-items:center">
+        <div class="icon" style="background:linear-gradient(135deg,#0b77ff,#2ca58d)">A</div>
+        <div>
+          <h3>Departamento de Apoio Técnico e Capacitação</h3>
+          <p>Responsável por programas de capacitação, cursos, oficinas e mentorias para empresários, com foco em gestão, finanças, vendas e transformação digital.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="dept" id="financas">
+      <div style="display:flex;gap:12px;align-items:center">
+        <div class="icon" style="background:linear-gradient(135deg,#1e88e5,#0b5cff)">F</div>
+        <div>
+          <h3>Departamento de Finanças e Incentivos Empresariais</h3>
+          <p>Desenvolve políticas de incentivo fiscal, parcerias com instituições financeiras e linhas de crédito direcionadas para a expansão e capital de giro de micro e pequenas empresas.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="dept" id="inovacao">
+      <div style="display:flex;gap:12px;align-items:center">
+        <div class="icon" style="background:linear-gradient(135deg,#2ca58d,#069669)">I</div>
+        <div>
+          <h3>Departamento de Inovação e Modernização Empresarial</h3>
+          <p>Estimula a adoção de tecnologia, processos digitais e práticas inovadoras — apoia projetos de transformação digital, integração com marketplaces e modernização operacional.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="dept" id="ouvidoria">
+      <div style="display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap">
+        <div style="display:flex;gap:12px;align-items:center;flex:1;min-width:220px">
+          <div class="icon" style="background:linear-gradient(135deg,#ff6b6b,#f43f5e)">O</div>
+          <div>
+            <h3>Ouvidoria do Empreendedor</h3>
+            <p>Canal de atendimento para ouvir demandas, reclamações, sugestões e elogios. Atua na mediação entre empresários e serviços da secretaria, garantindo retorno e acompanhamento.</p>
+          </div>
+        </div>
+
+        <div class="ouvidoria-cta">
+          <a class="btn" href="ouvidoria.html" target="_blank" rel="noopener">Acessar Ouvidoria</a>
+        </div>
+      </div>
+    </article>
+  </section>
+</main>
+
+<footer style="margin-top:30px">
+  <div style="max-width:1100px;margin:0 auto;padding:8px 16px;background:#fff;border-top:4px solid var(--vermelho);text-align:center">
+    <div style="font-weight:700">SEEMP — Secretaria do Empreendedor e Microempresa</div>
+    <div style="color:#6b7280">© 2025 SEEMP — Todos os direitos reservados</div>
+  </div>
+</footer>
+
+<script>
+/* menu drag-to-scroll (mouse & touch) */
+document.addEventListener('DOMContentLoaded', function(){
+  const menu=document.getElementById('menuScroll');
+  if(!menu) return;
+  let isDown=false,startX,scrollLeft;
+  menu.addEventListener('mousedown', function(e){ isDown=true; startX=e.pageX - menu.offsetLeft; scrollLeft=menu.scrollLeft; });
+  window.addEventListener('mouseup', function(){ isDown=false; });
+  menu.addEventListener('mousemove', function(e){ if(!isDown) return; e.preventDefault(); const x=e.pageX - menu.offsetLeft; menu.scrollLeft = scrollLeft - (x - startX)*1.2; });
+  // touch
+  let touchStartX=0,touchScrollLeft=0;
+  menu.addEventListener('touchstart', function(e){ touchStartX=e.touches[0].pageX; touchScrollLeft=menu.scrollLeft; });
+  menu.addEventListener('touchmove', function(e){ const x=e.touches[0].pageX; menu.scrollLeft = touchScrollLeft - (x - touchStartX)*1.2; });
+});
+</script>
+</body>
+</html>
